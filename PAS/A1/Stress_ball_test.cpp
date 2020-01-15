@@ -1,12 +1,13 @@
 #include <iostream>
 #include <cstdlib>
+#include <time.h>
 #include "Stress_ball.h"
 
 using namespace std;
 
 int main()
 {
-  srand(time(NULL));
+  srand(time(0));
 
   cout << "Default constructor test:\n";
   Stress_ball arr_test[5];

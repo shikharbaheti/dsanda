@@ -23,20 +23,13 @@ class Stress_ball
     Stress_ball_colors color;
 
 public:
-    Stress_ball_colors get_color()
-    {
-        return color;
-    };
-    Stress_ball_sizes get_size()
-    {
-        return size;
-    };
-    bool operator==(const Stress_ball &sb)
-    {
-      if (this->color == sb.color) {
-          return true;
-      }
-    }
-};  
+    Stress_ball();
+    Stress_ball(Stress_ball_colors c, Stress_ball_sizes s);
+    Stress_ball_colors get_color() const; 
+    Stress_ball_sizes get_size() const;
+    bool operator==(const Stress_ball &sb) const;
+};
+
+void operator<<(std::ostream &o, const Stress_ball &sb);
 
 #endif
