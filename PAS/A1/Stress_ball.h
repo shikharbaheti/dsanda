@@ -1,6 +1,8 @@
 #ifndef STRESS_BALL_H
 #define STRESS_BALL_H
 
+#include <iostream>
+
 enum class Stress_ball_colors
 {
     red,
@@ -30,6 +32,6 @@ public:
     bool operator==(const Stress_ball &sb) const;
 };
 
-void operator<<(std::ostream &o, const Stress_ball &sb);
+std::ostream& operator<<(std::ostream &o, const Stress_ball &sb);
 
 #endif

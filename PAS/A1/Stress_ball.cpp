@@ -1,8 +1,6 @@
 #include "Stress_ball.h"
 #include <iostream>
 
-using namespace std;
-
 Stress_ball_colors Stress_ball::get_color() const
 {
     return color;
@@ -30,26 +28,33 @@ bool Stress_ball::operator==(const Stress_ball &sb) const
     }
 }
 
-void operator<<(std::ostream &o, const Stress_ball &sb)
+std::ostream& operator<<(std::ostream &o, const Stress_ball &sb)
 {
     switch (sb.get_color())
     {
     case Stress_ball_colors::red:
-        cout << "(red, ";
+        std::cout << "(red, ";
+        break;
     case Stress_ball_colors::blue:
-        cout << "(blue, ";
+        std::cout << "(blue, ";
+        break;
     case Stress_ball_colors::yellow:
-        cout << "(yellow, ";
+        std::cout << "(yellow, ";
+        break;
     case Stress_ball_colors::green:
-        cout << "(green, ";
+        std::cout << "(green, ";
+        break;
     }
     switch (sb.get_size())
     {
     case Stress_ball_sizes::small:
-        cout << "small)";
+        std::cout << "small)";
+        break;
     case Stress_ball_sizes::medium:
-        cout << "medium)";
+        std::cout << "medium)";
+        break;
     case Stress_ball_sizes::large:
-        cout << "large)";
+        std::cout << "large)";
+        break;
     }
 }

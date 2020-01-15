@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-  srand(time(0));
+  srand(time(NULL));
 
   cout << "Default constructor test:\n";
   Stress_ball arr_test[5];
