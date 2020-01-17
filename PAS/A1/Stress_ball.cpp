@@ -22,13 +22,17 @@ Stress_ball::Stress_ball(Stress_ball_colors c, Stress_ball_sizes s)
 }
 bool Stress_ball::operator==(const Stress_ball &sb) const
 {
-    if (this->color == sb.color)
+    if ((this->color == sb.color) && (this->size == sb.size))
     {
         return true;
     }
+    else
+    {
+        return false;
+    }
 }
 
-std::ostream& operator<<(std::ostream &o, const Stress_ball &sb)
+std::ostream &operator<<(std::ostream &o, const Stress_ball &sb)
 {
     switch (sb.get_color())
     {

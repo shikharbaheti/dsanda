@@ -32,6 +32,8 @@ public:
     bool operator==(const Stress_ball &sb) const;
 };
 
+
+
 std::ostream& operator<<(std::ostream &o, const Stress_ball &sb);
 
 #endif
