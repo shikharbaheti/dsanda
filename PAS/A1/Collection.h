@@ -7,10 +7,10 @@
 
 class Collection
 {
-    Stress_ball *array;
+    Stress_ball *array; //pointer to dynamically allocated memory
     int size;
     int capacity;
-    void resize(); //resize the array. should double the size of the array and correctly copy elements from the old array to a new array.
+    void resize(int size, int &capacity, Stress_ball *thingToBeResized); //resize the array. should double the size of the array and correctly copy elements from the old array to a new array.
 
 public:
     Collection();
