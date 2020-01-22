@@ -30,6 +30,8 @@ public:
     void print_items() const;
     Stress_ball &operator[](int i);
     const Stress_ball &operator[](int i) const;
+    Collection(Collection &&other);            // move constructor
+    Collection &operator=(Collection &&other); //move assignment
 };
 
 #endif
