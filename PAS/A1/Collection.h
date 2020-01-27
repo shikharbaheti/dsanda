@@ -1,8 +1,6 @@
 #ifndef COLLECTION_H
 #define COLLECTION_H
-
 #include "Stress_ball.h"
-
 #include <iostream>
 
 class Collection
