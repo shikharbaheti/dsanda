@@ -1,13 +1,16 @@
 all: test
 
-test: Stress_ball.o Stress_ball_test.o
-	c++ -std=c++11 Stress_ball.o Stress_ball_test.o -o test
+test: Collection.o Collection_test.o Stress_ball.o
+	c++ -std=c++11 Collection.o Collection_test.o Stress_ball.o -o test
+
+Collection.o: Collection.cpp Collection.h Stress_ball.h
+	c++ -std=c++11 -c Collection.cpp
 
 Stress_ball.o: Stress_ball.cpp Stress_ball.h
 	c++ -std=c++11 -c Stress_ball.cpp
 
-Stress_ball_test.o: Stress_ball_test.cpp
-	c++ -std=c++11 -c Stress_ball_test.cpp
+Collection_test.o: Collection_test.cpp
+	c++ -std=c++11 -c Collection_test.cpp
 
 clean:
 	rm -f *.o test
