@@ -280,6 +280,10 @@ istream &operator>>(istream &is, Collection &c) //HOW TO REMOVE EMPTY LINES??
 };
 ostream &operator<<(ostream &os, const Collection &c)
 {
+    for (int i = 0; i < c.total_items(); i++)
+    {
+        os << c[i];
+    }
     return os;
 };
 

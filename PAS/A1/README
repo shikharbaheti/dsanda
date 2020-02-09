@@ -3,15 +3,13 @@ Shikhar Baheti
 221 - 501
 shikhar@tamu.edu
 
+I certify that I have listed all the sources that I used to develop the solutions and code to the
+submitted work.
 
 On my honor as an Aggie, I have neither given nor received any unauthorized help
 on this academic work.
 
-I utilized some of my previous assignments in CSCE 121 to complete this assignment such as how to declare classes, etc. I recieved no external help from the Internet but I did ask my TAs on assistance on the ENUM classes. This assignment was a warm up of our knowledge of C++ and required us to create a Class Stress Balls that contains a stress ball with varying sizes and colors based upon an enum class. This assignment required us to declare private and public functions in our class in order to randomly assign colors and sizes to the Stress Ball. We also created default constructors for the classes. 
+I did not utilize any help from any external sources to complete this assignment. This assignment required us to create Collection classes which held different tyes of stress balls and enabled us to do different functions on it such as inserting stress balls from a datafile, making unions of different stress ball collections, etc. I did not run into any trouble completing this assignment. I tested this program for correctness by calling different functions on different Collections to verify if they are working correctly. 
 
-I certify that I have listed all the sources that I used to develop the solutions and code to the
-submitted work.
-
-
-Shikhar Baheti              1/13/2020
+Shikhar Baheti              2/05/2020
 
