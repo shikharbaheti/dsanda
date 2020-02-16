@@ -1,0 +1,17 @@
+Shikhar Baheti
+627007339
+221 - 501
+shikhar@tamu.edu
+
+I certify that I have listed all the sources that I used to develop the solutions and code to the submitted work.
+
+On my honor as an Aggie, I have neither given nor received any unauthorized help
+on this academic work.
+
+I did not utilize any help from any external sources to complete this assignment. This assignment required us to create a templated version of the Collection class along with using templated functions (including other enum classes). Furthermore, we created a new class, Jeans, utilizing the same functionality as the Stress Balls class and tested it by using our templated Collection class. I did not run into any trouble completing this assignment. I tested this program for correctness by calling different functions on different Collections to verify if they are working correctly. 
+
+3) Write about the generic programming using templates based on this assignment Part 3.
+Generic programming is a style of computer programming that enables developers to write algorithms/classes in terms of abstraction and in terms of 'to be made specific later' than hard-coding types/instantiation upon coding style. This makes programs and algorithms generic to be used later for other data types. It increases code flexibility and reusability in a bigger code base. An example of this can be seen in the STL library provided by C++ with sort(). Sort() works on any data type because it a generic algorithm made with templates. In this assignment, we made our Collection class a templated class so that we can use its functions in different types of other classes (like Stress Balls and Jeans). 
+
+Shikhar Baheti              2/14/2020
+
