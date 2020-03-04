@@ -1,0 +1,15 @@
+Shikhar Baheti
+627007339
+Username: Shikhar
+221 - 501
+shikhar@tamu.edu
+
+I certify that I have listed all the sources that I used to develop the solutions and code to the submitted work.
+
+On my honor as an Aggie, I have neither given nor received any unauthorized help
+on this academic work.
+
+I did not utilize any help from any external sources to complete this assignment. This assignment required us to create a queue wrapping around the Templated Doubly Linked Lists. I utilized the functions previously defined in the Templated DLL to complete this assignment. All of the functions except Min are of constant time complexity O(1) because in: we are accessing and manipulating pointers directly without iterating through the linked list (which is of constant time complexity) - enqueue and dequeue. For the size, it is also constant time complexity because I am incrementing/decrementing the size variable according to how many enqueue or dequeue operations are performed. Is_empty() is also constant because we are simply judging if the header points to the trailer. I tested this program for correctness by calling different functions on templated (integer, in this case) Queue class to verify if they are working correctly and their operations are of constant time complexity.
+
+Shikhar Baheti              3/04/2020
+
