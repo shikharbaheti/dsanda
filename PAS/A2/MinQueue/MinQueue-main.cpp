@@ -29,13 +29,15 @@ int main()
     cout << "Queue 1: " << endl;
     queue1.printMQ();
 
+    cout << "Size of Queue before: " << queue1.sizeMQ() << endl;
+
     cout << "////// Dequeuing AN ELEMENT //////" << endl;
     queue1.dequeue();
 
     cout << "////// PRINTING QUEUE 1 UPDATED //////" << endl;
     queue1.printMQ();
 
-    cout << "Size of Queue: " << queue1.sizeMQ() << endl;
+    cout << "Size of Queue after: " << queue1.sizeMQ() << endl;
     cout << "Minimum of Queue: " << queue1.min() << endl;
 
     cout << endl;
