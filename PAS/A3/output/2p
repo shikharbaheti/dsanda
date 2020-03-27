@@ -1,0 +1,10 @@
+<---PERFECT TREE 2--->
+Average search time: 1.66667
+Total number of nodes: 3
+/// --- Level by Level --- ///
+2[1] 
+1[2] 3[2] 
+
+/// --- IN ORDER --- ///
+1[2] 2[1] 3[2] 
+

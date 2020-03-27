@@ -1,0 +1,14 @@
+<---RANDOM TREE 4--->
+Average search time: 3.73333
+Total number of nodes: 15
+/// --- Level by Level --- ///
+13[1] 
+7[2] 15[2] 
+5[3] 10[3] 14[3] X 
+2[4] 6[4] 9[4] 12[4] X X X X 
+1[5] 3[5] X X 8[5] X 11[5] X X X X X X X X X 
+X X X 4[6] X X X X X X X X X X X X X X X X X X X X X X X X X X X X 
+
+/// --- IN ORDER --- ///
+1[5] 2[4] 3[5] 4[6] 5[3] 6[4] 7[2] 8[5] 9[4] 10[3] 11[5] 12[4] 13[1] 14[3] 15[2] 
+

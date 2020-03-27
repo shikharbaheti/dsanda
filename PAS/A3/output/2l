@@ -1,0 +1,11 @@
+<---LINEAR TREE 2--->
+Average search time: 2
+Total number of nodes: 3
+/// --- Level by Level --- ///
+1[1] 
+X 2[2] 
+X X X 3[3] 
+
+/// --- IN ORDER --- ///
+1[1] 2[2] 3[3] 
+
