@@ -6,10 +6,10 @@ using namespace std;
 
 struct Node
 {
-  int value;
-  Node *left;
-  Node *right;
-  int search_time; //see the problem description
+  int value;       // value of each node
+  Node *left;      // pointer to left
+  Node *right;     // pointer to right
+  int search_time; // search time of each node
 
   // Node constructor
   Node(int val = 0, Node *l = nullptr, Node *r = nullptr)
@@ -21,6 +21,7 @@ struct BSTree
 public:
   // constructors
   BSTree() : size(0), root(nullptr) {}
+  // copy constructor
   BSTree(const BSTree &other);
   // move constructor
   BSTree(BSTree &&other);
@@ -29,42 +30,50 @@ public:
   // move assignment
   BSTree operator=(BSTree &&other);
   ~BSTree();
-
+  // returns root
   const Node *get_root() const { return root; }
+  // return size
   const int get_size() const { return size; }
-  Node *insert(int obj); // [DONE]
+  // returns a node to be inserted
+  Node *insert(int obj);
+  // returns a node that has been searched
   Node *search(int obj);
+  // updates search times
   void update_search_times();
-  float get_average_search_time(); // [DONE]
+  // returns the average search time
+  float get_average_search_time();
+  // prints in order
   ostream &inorder(ostream &out);
-  ostream &print_level_by_level(ostream &out);      // [DONE]
-  void pretty_print_node(ostream &out, Node *node); // [DONE]
-  int get_total_search_time(Node *node);            // [DONE]
+  // prints level by level
+  ostream &print_level_by_level(ostream &out);
+  // prints in pretty mode
+  void pretty_print_node(ostream &out, Node *node);
+  // returns summing search times from each node
+  int get_total_search_time(Node *node);
 
 private:
-  int size;
-  Node *root;
-  int count; //for comparisions.
+  int size;   // size of the binary tree (number of nodes)
+  Node *root; // root of each binary tree
+  int count;  //for comparisions.
 
-  //HELPER FUNCTIONS!
-  // you may need helper functions to be called recursively
-  // this is one example:
+  //<-----HELPER FUNCTIONS----->
   void printInorder(BSTree &tree);
   void copy_helper(Node *copy_to, const Node *copy_from) const;
-  Node *insertHelper(Node *node, int obj); // [DONE]
+  Node *insertHelper(Node *node, int obj);
   void inorderHelp(Node *node, ostream &out);
   void updateHelper(Node *node);
-  Node *searchHelper(Node *node, int obj); // [DONE]
+  Node *searchHelper(Node *node, int obj);
   Node *deleting(Node *node);
+  //<-----HELPER FUNCTIONS END----->
 };
 
 // print a BSTree
-ostream &operator<<(ostream &out, BSTree &tree); // [DONE]
+ostream &operator<<(ostream &out, BSTree &tree);
 
 // print a node
-ostream &operator<<(ostream &out, Node node); // [DONE]
+ostream &operator<<(ostream &out, Node node);
 
 // read in a tree from a file
-istream &operator>>(istream &in, BSTree &tree); // [DONE]
+istream &operator>>(istream &in, BSTree &tree);
 
 #endif

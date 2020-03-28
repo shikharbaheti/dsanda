@@ -20,8 +20,7 @@ ostream &operator<<(ostream &out, BSTree &tree)
 
 ostream &operator<<(ostream &out, Node node)
 {
-  return out << "( " << node.value << ", "
-             << node.search_time << " )";
+  return out << "( " << node.value << ", " << node.search_time << " )";
 }
 
 istream &operator>>(istream &in, BSTree &tree)
@@ -115,7 +114,7 @@ BSTree::~BSTree()
   root = nullptr;
 };
 
-// recursive
+// HELPER FOR COPYING NODES
 void BSTree::copy_helper(Node *copy_to,
                          const Node *copy_from) const
 {
@@ -142,10 +141,14 @@ void BSTree::copy_helper(Node *copy_to,
   }
 };
 
-//helper
+//HELPER FOR INSERT
 Node *BSTree::insertHelper(Node *node, int obj)
 {
   count++;
+  if (node->value == obj)
+  {
+    return NULL;
+  }
   if (node->value < obj)
   {
     if (node->right == nullptr)
@@ -175,7 +178,7 @@ Node *BSTree::insertHelper(Node *node, int obj)
     }
   }
 };
-
+// returns a node to be inserted
 Node *BSTree::insert(int obj)
 {
   count = 1;
@@ -188,11 +191,10 @@ Node *BSTree::insert(int obj)
   }
   else
   {
-
     return insertHelper(root, obj);
   }
 };
-
+// HELPER FOR THE SEARCH FUNCTION
 Node *BSTree::searchHelper(Node *node, int obj)
 {
   if (node->value == obj)
@@ -212,7 +214,7 @@ Node *BSTree::searchHelper(Node *node, int obj)
     return nullptr;
   }
 };
-
+// returns a node to be inserted
 Node *BSTree::search(int obj)
 {
 
@@ -225,7 +227,7 @@ Node *BSTree::search(int obj)
     return searchHelper(root, obj);
   }
 };
-
+// HELPER TO UPDATE SEARCH TIMES
 void BSTree::updateHelper(Node *node)
 {
   if (node == nullptr)
@@ -243,13 +245,13 @@ void BSTree::updateHelper(Node *node)
     updateHelper(node->left);
   }
 }
-
+// updates search times
 void BSTree::update_search_times()
 {
   root->search_time = 1;
   updateHelper(root);
 };
-
+// HELPER TO THE INORDER FUNCTION
 void BSTree::inorderHelp(Node *node, ostream &out)
 {
   if (node->left != nullptr)

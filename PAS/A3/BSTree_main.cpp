@@ -6,11 +6,6 @@ using namespace std;
 
 BSTree read_file(string file_name)
 {
-     /*
-    open the file and use the input operator (operator>>)
-    to construct a new tree
-  */
-     // use >> to read in to new_tree
      BSTree new_tree;
      ifstream infile(file_name);
      infile >> new_tree;
@@ -23,7 +18,7 @@ int main()
           << endl;
 
      cout << "PRINTING TREE ONE \n";
-     BSTree amazingTree = read_file("data-files/4p");
+     BSTree amazingTree = read_file("data-files/4p"); //constructing a test tree.
      cout << amazingTree << endl;
 
      cout << "////////////////////////////////////////////////////////" << endl
@@ -32,7 +27,7 @@ int main()
      cout << "SEARCHING TEST" << endl;
      int search = 68;
      cout << "Searching for: " << search << endl;
-     Node *n = amazingTree.search(search);
+     Node *n = amazingTree.search(search); //return a node if certain node is found
      if (n == nullptr)
      {
           cout << "Did not find the node in the tree" << endl
@@ -85,7 +80,7 @@ int main()
      cout << tree4 << endl;
 
      cout << "<------////////////////////////////////////////////////////////------>" << endl;
-     cout << "//// APPLICATION ////" << endl;
+     cout << "//// APPLICATION ////" << endl; //PART TWO OF THE ASSIGNMENT
 
      for (int i = 1; i <= 12; i++)
      {
@@ -117,8 +112,6 @@ int main()
           }
      }
 
-     // INODER 1 - 12 should go in files.
-
      // FOR PRINTING IN FILES
      for (int i = 1; i <= 12; i++)
      {
@@ -126,7 +119,7 @@ int main()
 
           //LINEAR
           BSTree l = read_file(dir + "l");
-          string name = "output/" + to_string(i) + "l";
+          string name = "output/" + to_string(i) + "l"; // PRINT IN THE OUTPUT FOLDER
           ofstream outfilel(name);
           outfilel << "<---LINEAR TREE " << i << "--->" << endl;
           outfilel << "Average search time: " << l.get_average_search_time() << endl;
@@ -136,7 +129,7 @@ int main()
 
           //PERFECT
           BSTree p = read_file(dir + "p");
-          name = "output/" + to_string(i) + "p";
+          name = "output/" + to_string(i) + "p"; // PRINT IN THE OUTPUT FOLDER
           ofstream outfilep(name);
           outfilep << "<---PERFECT TREE " << i << "--->" << endl;
           outfilep << "Average search time: " << p.get_average_search_time() << endl;
@@ -146,7 +139,7 @@ int main()
 
           //RANDOM
           BSTree r = read_file(dir + "r");
-          name = "output/" + to_string(i) + "r";
+          name = "output/" + to_string(i) + "r"; // PRINT IN THE OUTPUT FOLDER
           ofstream outfiler(name);
           outfiler << "<---RANDOM TREE " << i << "--->" << endl;
           outfiler << "Average search time: " << r.get_average_search_time() << endl;
