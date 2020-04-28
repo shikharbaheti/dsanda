@@ -7,6 +7,7 @@ void Graph::buildGraph(ifstream &input)
     while (getline(input, line, '\n'))
     {
         stringstream inputStorage(line);
+        numVertices++;
         inputStorage >> lineProcessing;
         if (lineProcessing == "-1")
         {
@@ -29,12 +30,13 @@ void Graph::buildGraph(ifstream &input)
 };
 void Graph::displayGraph()
 {
+    cout << "/////////// PRINTING GRAPH AND ADJ_LIST ///////////" << endl;
     for (int i = 0; i < node_list.size(); i++)
     {
         cout << node_list[i].label << ": ";
         for (const auto edges : *adj_list[i])
         {
-            cout << edges;
+            cout << edges << " ";
         }
         cout << endl;
     }

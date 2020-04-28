@@ -1,5 +1,5 @@
-#OBJ = main.o graph.o topological_sort.o # Part 2
-OBJ = main.o graph.o #comment out second one when doing part 2
+OBJ = main.o graph.o topological_sort.o # Part 2
+# OBJ = main.o graph.o #comment out second one when doing part 2
 MAIN = main
 
 $(MAIN): $(OBJ)
