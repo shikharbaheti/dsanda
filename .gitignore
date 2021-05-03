@@ -1,5 +1,6 @@
-TESTING
-
+*.tar
+*.tar.gz
+*.pdf
 
 #PA3
 PAS/A3/.vscode
